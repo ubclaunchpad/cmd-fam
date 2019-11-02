@@ -5,9 +5,6 @@ chrome.runtime.onInstalled.addListener(function() {
         new chrome.declarativeContent.PageStateMatcher({
           pageUrl: {hostContains: 'developer.chrome.com'},
         }),
-        new chrome.declarativeContent.PageStateMatcher({
-          pageUrl: { hostContains: 'www.youtube.com' },
-        }),
         // When a page contains a <video> tag...
         new chrome.declarativeContent.PageStateMatcher({
           css: ["video"]
@@ -17,8 +14,6 @@ chrome.runtime.onInstalled.addListener(function() {
     }]);
   });
 });
-
-chrome.runtime.onUn
 
 chrome.commands.onCommand.addListener(function(command) {
   console.log('Command:', command);
