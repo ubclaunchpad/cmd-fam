@@ -13,7 +13,7 @@ document.getElementById('searchInput').addEventListener(
     chrome.storage.sync.set({
       keyword: this.value
     }, function() {
-      console.log("The keyword: " + this.value);
+      // console.log("The keyword: " + this.value);
     });
   },
   false
@@ -32,7 +32,7 @@ clear.onclick = function(element) {
   chrome.storage.sync.set({
     keyword: ""
   }, function() {
-    console.log("The keyword: empty");
+    // console.log("The keyword: empty");
   });
   document.getElementById("searchInput").value = "";
   document.getElementById("searchInput").focus();
