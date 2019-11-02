@@ -1,11 +1,14 @@
+"""Server"""
+
+import json
 from flask import Flask
 from flask import request
-
 from service.VideoDownload import VideoDownload
-import json
+from flask_cors import CORS
 
 app = Flask(__name__)
 
+CORS(app)
 
 @app.after_request
 def add_headers(response):
@@ -17,13 +20,9 @@ def add_headers(response):
 
 
 @app.route('/')
-def hello():
-    return "Hello World!"
-
-
-@app.route('/<name>')
-def hello_name(name):
-    return "Hello {}!".format(name)
+def main():
+    return "Main Page"
+    
 
 
 @app.route('/video', methods=["POST"])
