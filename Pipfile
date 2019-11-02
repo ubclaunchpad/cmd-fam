@@ -4,10 +4,13 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+pycodestyle = "*"
+pydocstyle = "*"
 
 [packages]
 flask = "*"
 youtube-transcript-api = "*"
+flask-cors = "*"
 
 [requires]
 python_version = "3.7"
