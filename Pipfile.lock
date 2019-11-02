@@ -1,8 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "de1e6691b7a5a3aa520ef2fd9f94a004d2d3c4f57dc1feb577fb031b2339a0df"
-            "sha256": "3890472530731f0c50bf092eb0abea76e7b92ca13f1d370f9714a0957de35dee"
+            "sha256": "b1cf4ae81890bbc427e6a37a73853ccfcb8f109b3ecee3e6c45374d08fdb1571"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -46,14 +45,6 @@
             "index": "pypi",
             "version": "==1.1.1"
         },
-<<<<<<< HEAD
-        "idna": {
-            "hashes": [
-                "sha256:c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407",
-                "sha256:ea8b7f6188e6fa117537c3df7da9fc686d485087abf6ac197f9c46432f7e4a3c"
-            ],
-            "version": "==2.8"
-=======
         "flask-cors": {
             "hashes": [
                 "sha256:72170423eb4612f0847318afff8c247b38bd516b7737adfc10d1c2cdbb382d16",
@@ -61,7 +52,13 @@
             ],
             "index": "pypi",
             "version": "==3.0.8"
->>>>>>> adding some more flask setup
+        },
+        "idna": {
+            "hashes": [
+                "sha256:c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407",
+                "sha256:ea8b7f6188e6fa117537c3df7da9fc686d485087abf6ac197f9c46432f7e4a3c"
+            ],
+            "version": "==2.8"
         },
         "itsdangerous": {
             "hashes": [
@@ -110,7 +107,6 @@
             ],
             "version": "==1.1.1"
         },
-<<<<<<< HEAD
         "requests": {
             "hashes": [
                 "sha256:11e007a8a2aa0323f5a921e9e6a2d7e4e67d9877e85773fba9ba6419025cbeb4",
@@ -118,20 +114,19 @@
             ],
             "version": "==2.22.0"
         },
-        "urllib3": {
-            "hashes": [
-                "sha256:3de946ffbed6e6746608990594d08faac602528ac7015ac28d33cee6a45b7398",
-                "sha256:9a107b99a5393caf59c7aa3c1249c16e6879447533d0887f4336dde834c7be86"
-            ],
-            "version": "==1.25.6"
-=======
         "six": {
             "hashes": [
                 "sha256:3350809f0555b11f552448330d0b52d5f24c91a322ea4a15ef22629740f3761c",
                 "sha256:d16a0141ec1a18405cd4ce8b4613101da75da0e9a7aec5bdd4fa804d0e0eba73"
             ],
             "version": "==1.12.0"
->>>>>>> adding some more flask setup
+        },
+        "urllib3": {
+            "hashes": [
+                "sha256:3de946ffbed6e6746608990594d08faac602528ac7015ac28d33cee6a45b7398",
+                "sha256:9a107b99a5393caf59c7aa3c1249c16e6879447533d0887f4336dde834c7be86"
+            ],
+            "version": "==1.25.6"
         },
         "werkzeug": {
             "hashes": [
