@@ -1,6 +1,5 @@
 from flask import Flask
 from flask import request
-import json
 
 from service.VideoDownload import VideoDownload
 
