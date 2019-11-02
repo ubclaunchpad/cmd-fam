@@ -12,7 +12,7 @@ class VideoDownload:
         try:
             self.script = YouTubeTranscriptApi.get_transcript(self.id)
         except YouTubeTranscriptApi.CouldNotRetrieveTranscript:
-            return json.dumps({ "error": "No caption for this youtube video"}), 404
+            return json.dumps({"error": "No caption for this youtube video"}), 404
             # self.from_youtube()
         return "caption fetched"
 

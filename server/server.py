@@ -2,6 +2,7 @@ from flask import Flask
 from flask import request
 
 from service.VideoDownload import VideoDownload
+import json
 
 app = Flask(__name__)
 
@@ -25,9 +26,13 @@ def hello_name(name):
     return "Hello {}!".format(name)
 
 
-@app.route('/video/youtube', methods=["POST"])
-def youtube_video():
-    return VideoDownload(request.json).fetch_transcript_youtube()
+@app.route('/video', methods=["POST"])
+def video_process():
+    body = request.json
+    if body['type'] == 'youtube':
+        return VideoDownload(request.json).fetch_transcript_youtube()
+    else:
+        return json.dumps({"error": "Video type not compatible"}), 404
 
 
 if __name__ == '__main__':
