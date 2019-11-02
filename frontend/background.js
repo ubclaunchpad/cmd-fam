@@ -1,10 +1,4 @@
 chrome.runtime.onInstalled.addListener(function() {
-  chrome.storage.sync.set({
-      color: '#ffffff'
-    }, function() {
-    console.log("The color is green.");
-  });
-
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
     chrome.declarativeContent.onPageChanged.addRules([{
       conditions: [
@@ -23,6 +17,8 @@ chrome.runtime.onInstalled.addListener(function() {
     }]);
   });
 });
+
+chrome.runtime.onUn
 
 chrome.commands.onCommand.addListener(function(command) {
   console.log('Command:', command);
