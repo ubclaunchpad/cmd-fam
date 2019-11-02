@@ -1,8 +1,19 @@
 from flask import Flask
+from flask import request
+import json
 
 from service.VideoDownload import VideoDownload
 
 app = Flask(__name__)
+
+
+@app.after_request
+def add_headers(response):
+    response.headers['Access-Control-Allow-Origin'] = '*'
+    response.headers[
+        'Access-Control-Allow-Headers'] = "Content-Type, Access-Control-Allow-Headers"
+    response.headers['Access-Control-Allow-Methods'] = "POST, GET, PUT, DELETE, OPTIONS"
+    return response
 
 
 @app.route('/')
@@ -16,9 +27,8 @@ def hello_name(name):
 
 
 @app.route('/video/youtube', methods=["POST"])
-def youtube_video(request):
-    VideoDownload(request.get_json()).fetch_transcript_youtube()
-    return 'Fetched youtube video script'
+def youtube_video():
+    return VideoDownload(request.json).fetch_transcript_youtube()
 
 
 if __name__ == '__main__':

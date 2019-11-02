@@ -1,5 +1,6 @@
 from __future__ import unicode_literals
 from youtube_transcript_api import YouTubeTranscriptApi
+import json
 
 
 class VideoDownload:
@@ -11,9 +12,9 @@ class VideoDownload:
         try:
             self.script = YouTubeTranscriptApi.get_transcript(self.id)
         except YouTubeTranscriptApi.CouldNotRetrieveTranscript:
-            pass
+            return json.dumps({ "error": "No caption for this youtube video"}), 404
             # self.from_youtube()
-        print(self.script)
+        return "caption fetched"
 
 
 
