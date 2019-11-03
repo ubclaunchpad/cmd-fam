@@ -5,16 +5,18 @@
   </head>
   <body>
     <form class="search_field" method="GET" action="http://www.google.com/search">
-      <input name="q" id="search-input" autofocus/>
+      <input name="q" id="searchInput" autocomplete="off" autofocus/>
+          <p class="occurences">0/0</p> <!-- HARD-CODED-->
           <div class="search-icons">
-              <button type="submit" class="arrow-down-icon" id="changeColor"></button>
-              <button type="submit" class="arrow-up-icon"></button>
-              <button type="submit" class="close-icon"></button>
+              <button type="submit" class="arrow-down-icon" id="next"></button>
+              <button type="submit" class="arrow-up-icon" id="previous"></button>
+              <button type="submit" class="close-icon" id="clear"></button>
           </div>
     </form>
 
     <label>Content Summary</label>
     
+    <!-- HARD-CODED-->
     <div class="content-summary">
       <p>00:00 - Introduction</p>
       <p>05:00 - Preparation</p>
@@ -23,12 +25,7 @@
       <p>20:00 - Enjoying the meal</p>
       <p>25:00 - Sleeping</p>
     </div>
-    <!--
-    <form class="search-field">
-      <input name="message" rows="2" class="question" id="msg" required autocomplete="off" placeholder="Keyword"></textarea>
-      <button type="submit" id="changeColor"><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Crystal_Clear_action_viewmag.png/16px-Crystal_Clear_action_viewmag.png" alt="Search" /></button>
-    </form>
-    -->
+
     <script src="popup.js"></script>
   </body>
 </html>
