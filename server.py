@@ -24,7 +24,3 @@ def video_process():
         return VideoDownload(request.json).fetch_transcript_youtube()
     else:
         return json.dumps({"error": "Video type not compatible"}), 404
-
-
-if __name__ == '__main__':
-    app.run(debug=True, port=8050)
