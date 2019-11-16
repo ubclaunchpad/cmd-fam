@@ -15,6 +15,6 @@ pipenv install --dev
 
 ```sh
 pipenv shell
-export FLASK_APP=server/server.py
+export FLASK_APP=server.py
 flask run
 ```
