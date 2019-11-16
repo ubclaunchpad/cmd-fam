@@ -1,7 +1,9 @@
 # Control-F for video
-[![Build Status](https://travis-ci.org/ubclaunchpad/cmd-fam.svg?branch=master)](https://travis-ci.org/ubclaunchpad/cmd-fam)
+
+[![Build Status](https://travis-ci.com/ubclaunchpad/cmd-fam.svg?branch=master)](https://travis-ci.com/ubclaunchpad/cmd-fam)
 
 ## Setup
+
 ```sh
 git clone https://github.com/ubclaunchpad/cmd-fam.git
 cd cmd-fam/
