@@ -20,7 +20,10 @@ def main():
 def video_process():
     """Process video information."""
     body = request.json
+    if(body):
+        return "Invalid data", 400
     if body['type'] == 'youtube':
-        return VideoDownload(request.json).fetch_transcript_youtube()
+        transcript = VideoDownload(request.json).fetch_transcript_youtube()
+        return "Transcript acquired"
     else:
         return json.dumps({"error": "Video type not compatible"}), 404

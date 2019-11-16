@@ -20,4 +20,4 @@ class VideoDownload:
             return json.dumps({
                 "error": "No caption for this youtube video"
             }), 404
-        return "caption fetched"
+        return self.script
