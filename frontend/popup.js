@@ -3,8 +3,10 @@ chrome.storage.sync.get('keyword', function(data) {
   searchInput.setAttribute('value', data.keyword);
 });
 
+let video_url = "";
+
 chrome.tabs.query({'active': true, 'lastFocusedWindow': true}, function (tabs) {
-  let video_url = tabs[0].url; //TODO: Send this info to server
+  video_url = tabs[0].url; //TODO: Send this info to server
 });
 
 document.getElementById('searchInput').addEventListener(
@@ -21,7 +23,7 @@ document.getElementById('searchInput').addEventListener(
 
 
 next.onclick = function(element) {
-  alert("next"); //TODO: Add functionality
+  alert(video_url); //TODO: Add functionality
 };
 
 previous.onclick = function(element) {
